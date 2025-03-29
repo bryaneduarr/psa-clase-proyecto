@@ -10,7 +10,7 @@ Crea copias de seguridad comprimidas de los datos del usuario con las siguientes
 - Mantiene un conjunto rotatorio de las 5 copias de seguridad más recientes
 - Registra todas las operaciones de copia de seguridad
 
-## backupSO.sh
+## backup_so.sh
 
 Crea copias de seguridad completas del sistema con:
 
@@ -18,7 +18,7 @@ Crea copias de seguridad completas del sistema con:
 - No realiza copia de archivos temporales e inecesarios
 - Registro de todas las operaciones de copia de seguridad
 
-## restaurarPuntoRespaldo.sh
+## restaurar_punto_respaldo.sh
 
 Proporciona una interfaz interactiva para:
 

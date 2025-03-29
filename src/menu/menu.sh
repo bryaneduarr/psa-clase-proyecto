@@ -2,9 +2,9 @@
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-LIMPIEZA_SCRIPT="$BASE_DIR/limpieza/limpiar-temporales.sh"
-RESPALDO_SCRIPT="$BASE_DIR/system-backup/backup.sh"
-ANALISIS_SCRIPT="$BASE_DIR/log-analysis/analisis_logs.sh"
+LIMPIEZA_SCRIPT="$BASE_DIR/limpieza/limpiar_temporales.sh"
+RESPALDO_SCRIPT="$BASE_DIR/backups/backup-usuario/backup.sh"
+ANALISIS_SCRIPT="$BASE_DIR/analisisologs/analisis_logs.sh"
 
 if [[ ! -f $LIMPIEZA_SCRIPT ]]; then
     echo "Error: No se encuentra $LIMPIEZA_SCRIPT"
