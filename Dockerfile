@@ -11,6 +11,7 @@ RUN apt update && apt upgrade -y && apt install -y \
     sudo \
     shellcheck \
     iproute2 \
+    zstd \
     sudo && apt clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace

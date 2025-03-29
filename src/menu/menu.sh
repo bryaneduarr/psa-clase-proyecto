@@ -2,9 +2,9 @@
 
 BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-LIMPIEZA_SCRIPT="$BASE_DIR/limpieza/limpiar_temporales.sh"
-RESPALDO_SCRIPT="$BASE_DIR/backups/backup-usuario/backup.sh"
-ANALISIS_SCRIPT="$BASE_DIR/analisisologs/analisis_logs.sh"
+LIMPIEZA_SCRIPT="$BASE_DIR/../limpieza/limpiar_temporales.sh"
+RESPALDO_SCRIPT="$BASE_DIR/../backups/backup-usuario/backup.sh"
+ANALISIS_SCRIPT="$BASE_DIR/../analisis-logs/analisis_logs.sh"
 
 if [[ ! -f $LIMPIEZA_SCRIPT ]]; then
     echo "Error: No se encuentra $LIMPIEZA_SCRIPT"
@@ -33,18 +33,21 @@ while true; do
 
     case $opcion in
     1)
+        clear
         echo "Ejecutando limpieza de archivos temporales..."
         bash "$LIMPIEZA_SCRIPT"
         echo "Limpieza de archivos temporales completada."
         read -r -p "Presione Enter para continuar..."
         ;;
     2)
+        clear
         echo "Ejecutando copia de seguridad..."
         bash "$RESPALDO_SCRIPT"
         echo "Copia de seguridad completada."
         read -r -p "Presione Enter para continuar..."
         ;;
     3)
+        clear
         echo "Ejecutando análisis de logs..."
         bash "$ANALISIS_SCRIPT"
         echo "Análisis de logs completado."
