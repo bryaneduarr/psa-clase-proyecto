@@ -24,3 +24,33 @@ bash menu.sh
 ```
 
 _Cada script también puede ejecutarse individualmente si es necesario._
+
+### Docker
+
+Si utilizas [Docker](https://www.docker.com/), puede compilar y ejecutar la imagen con `docker-compose` con el siguiente comando:
+
+```bash
+docker-compose up -d
+```
+
+Para acceder al shell dentro del contenedor, puede usar el siguiente comando:
+
+```bash
+docker exec -it psa-proyecto-container /bin/bash
+```
+
+Para detener el contenedor, puede usar el siguiente comando:
+
+```bash
+docker-compose down
+```
+
+### Contenedores de desarrollo
+
+Si utilizas [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) de [Visual Studio Code](https://code.visualstudio.com/), utiliza el editor de [Visual Studio Code](https://code.visualstudio.com/) y clona este repositorio con el comando:
+
+```bash
+git clone https://github.com/bryaneduarr/psa-clase-proyecto.git 
+```
+
+Una vez clonado este repositorio y abras [Visual Studio Code](https://code.visualstudio.com/), debería aparecer un mensaje que te pide que abras en el contenedor. También puedes buscar esta opción en la paleta de comandos integrada en el editor. Al aceptarla, se iniciará la construcción de la imagen y el proyecto.
