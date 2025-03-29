@@ -1,0 +1,11 @@
+services:
+  psa-proyecto:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: psa-proyecto-container
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/workspace
+    command: /bin/bash

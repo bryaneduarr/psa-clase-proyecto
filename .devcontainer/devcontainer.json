@@ -1,0 +1,45 @@
+{
+    "name": "psa-clase-proyecto",
+    "build": {
+        "dockerfile": "../Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.black-formatter",
+                "ms-python.vscode-pylance",
+                "ms-python.python",
+                "ms-python.debugpy",
+                "ms-azuretools.vscode-docker",
+                "mads-hartmann.bash-ide-vscode",
+                "foxundermoon.shell-format",
+                "rogalmic.bash-debug",
+                "jeff-hykin.better-shellscript-syntax",
+                "rpinski.shebang-snippets",
+                "timonwong.shellcheck",
+                "KevinRose.vsc-python-indent",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "njqdev.vscode-python-typehint",
+                "frhtylcn.pythonsnippets",
+                "ms-python.pylint",
+                "kaih2o.python-resource-monitor",
+                "cstrap.python-snippets",
+                "DavidAnson.vscode-markdownlint"
+            ],
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            }
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "root",
+    "portsAttributes": {
+        "8000": {
+            "label": "Python",
+            "onAutoForward": "notify"
+        }
+    },
+    "forwardPorts": [
+        8000
+    ]
+}
